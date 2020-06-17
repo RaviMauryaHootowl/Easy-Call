@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 require('dotenv/config');
 
 //Connect to DB
-mongoose.connect('mongodb+srv://ravimaurya027:ravimaurya027@cluster0-kvlzx.mongodb.net/<dbname>?retryWrites=true&w=majority', { useUnifiedTopology: true , useNewUrlParser: true  }, ()=> {
+mongoose.connect(process.env.DB, { useUnifiedTopology: true , useNewUrlParser: true  }, ()=> {
   console.log('Connected to DB!');
 });
 
