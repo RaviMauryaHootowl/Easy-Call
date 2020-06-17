@@ -16,9 +16,10 @@ app.use(express.json());
 const authRoute = require('./routes/auth');
 app.use('/api/user', authRoute);   //Middleware
 
-app.get('*', (req, res) => {
+app.get('/', (req, res) => {
   res.send('Welcome');
 })
+
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, ()=>{
   console.log(`Server started at PORT ${PORT}`);
