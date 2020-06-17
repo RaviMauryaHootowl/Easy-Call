@@ -19,7 +19,7 @@ app.get('*', (req, res) => {
 const authRoute = require('./routes/auth');
 app.use('/api/user', authRoute);   //Middleware
 
-const port = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5000;
 app.listen(PORT, ()=>{
   console.log(`Server started at PORT ${PORT}`);
 });
